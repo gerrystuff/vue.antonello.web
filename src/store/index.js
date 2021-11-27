@@ -14,8 +14,12 @@ export default createStore({
 
     mutations: {
         addFoodItem( state , foodItem){
-            console.log(foodItem)
             state.foodItems.push(foodItem);
+        },
+
+        removeFoodItem(state,index){
+            state.foodItems.splice(index,1);
+
         }
     }
 })

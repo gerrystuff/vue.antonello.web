@@ -1,73 +1,90 @@
 <template>
   <div class="content">
     <div class="menu">
-      <MenuItem 
-        title="Fetuccini Alfredo" 
+      <MenuItem
+        title="Fetuccini Alfredo"
         price="105.00"
-        recipe= "[Pasta Fetuccine,Mantequilla,Queso Parmesano,Crema de Leche,Sal,Pimienta Blanca,Nuez]"
-        indexImage="0" />
+        recipe="[Pasta Fetuccine,Mantequilla,Queso Parmesano,Crema de Leche,Sal,Pimienta Blanca,Nuez]"
+        indexImage="0"
+      />
 
-      <MenuItem 
-        title="Pizza Margarita" 
+      <MenuItem
+        title="Pizza Margarita"
         price="145.00"
-        recipe= "[Masa,Queso Mozzarella,Albahaca,Tomate,Pimienta Negra,Sal,Aceita de oliva]"
-        indexImage="1" />
-        
-      <MenuItem 
-        title="Coctel Frutas" 
+        recipe="[Masa,Queso Mozzarella,Albahaca,Tomate,Pimienta Negra,Sal,Aceita de oliva]"
+        indexImage="1"
+      />
+
+      <MenuItem
+        title="Coctel Frutas"
         price="65.00"
-        recipe= "[Fresa,Platano,Piña,Melon]"
-        indexImage="2" />
+        recipe="[Fresa,Platano,Piña,Melon]"
+        indexImage="2"
+      />
 
-      <MenuItem 
-        title="Pizza Pepperoni" 
+      <MenuItem
+        title="Pizza Pepperoni"
         price="120.00"
-        recipe= "[Masa,Queso Mozzarella,Pepperoni]"
-        indexImage="3" />
+        recipe="[Masa,Queso Mozzarella,Pepperoni]"
+        indexImage="3"
+      />
 
-      <MenuItem 
-        title="Spaghetti Bolognesa" 
+      <MenuItem
+        title="Spaghetti Bolognesa"
         price="155.00"
-        recipe= "[Pasta Linguini,Mantequilla,Carne Molida,Sal]"
-        indexImage="4" />
-
-
-
+        recipe="[Pasta Linguini,Mantequilla,Carne Molida,Sal]"
+        indexImage="4"
+      />
     </div>
 
-    <div  class="sell">
-      
+    <div class="sell">
       <div class="selected">
-
-      <FoodList ref="foodList"/>
+        <FoodList />
       </div>
-
 
       <div class="payment">
+        <div class="total" style=" height:70%; ">
+          <p>$ 105.00</p>
+        </div>
 
+        <div class="pay">
+          <button type="button" style="width:70%;" class="btn btn-primary"> Pagar </button>
+        </div>
       </div>
-        
-    </div>
 
+
+    </div>
   </div>
 </template>
 
 <script>
 import MenuItem from "@/components/MenuItem";
-import FoodList from '@/components/FoodList.vue'
+import FoodList from "@/components/FoodList.vue";
 
 export default {
   components: { MenuItem, FoodList },
- 
- methods: {
 
- }
-
-
+  methods: {},
 };
 </script>
 
 <style scoped>
+
+
+.total {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.payment p {
+  font-size: 30px;
+  font-weight: 700;
+}
+
 .content {
   display: flex;
   flex-wrap: nowrap;
@@ -85,16 +102,15 @@ export default {
   height: fit-content;
 }
 
-.sell{
+.sell {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   height: 100%;
   margin: 0 55px 0 55px;
-
 }
 
-.selected{
+.selected {
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -104,14 +120,15 @@ export default {
   transition: 0.3s;
 }
 
-
-
-.payment{
+.payment {
+  padding: 15px;
   margin-top: auto;
   width: 30%;
   height: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
 </style>
