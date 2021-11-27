@@ -1,18 +1,45 @@
 <template>
   <div class="content">
     <div class="menu">
-      <MenuItem title="Fetuccini Alfredo"     indexImage="0" />
-      <MenuItem title="Pizza Margarita"       indexImage="1" />
-      <MenuItem title="Coctel Frutas"         indexImage="2" />
-      <MenuItem title="Pizza Pepperoni"       indexImage="3" />
-      <MenuItem title="Spaghetti Bolognesa"   indexImage="4" />
+      <MenuItem 
+        title="Fetuccini Alfredo" 
+        price="105.00"
+        recipe= "[Pasta Fetuccine,Mantequilla,Queso Parmesano,Crema de Leche,Sal,Pimienta Blanca,Nuez]"
+        indexImage="0" />
+
+      <MenuItem 
+        title="Pizza Margarita" 
+        price="145.00"
+        recipe= "[Masa,Queso Mozzarella,Albahaca,Tomate,Pimienta Negra,Sal,Aceita de oliva]"
+        indexImage="1" />
+        
+      <MenuItem 
+        title="Coctel Frutas" 
+        price="65.00"
+        recipe= "[Fresa,Platano,Piña,Melon]"
+        indexImage="2" />
+
+      <MenuItem 
+        title="Pizza Pepperoni" 
+        price="120.00"
+        recipe= "[Masa,Queso Mozzarella,Pepperoni]"
+        indexImage="3" />
+
+      <MenuItem 
+        title="Spaghetti Bolognesa" 
+        price="155.00"
+        recipe= "[Pasta Linguini,Mantequilla,Carne Molida,Sal]"
+        indexImage="4" />
+
+
+
     </div>
 
-    <div @click="idkwtf" class="sell">
+    <div  class="sell">
       
       <div class="selected">
 
-      <FoodList ref="idk"/>
+      <FoodList ref="foodList"/>
       </div>
 
 
@@ -33,9 +60,7 @@ export default {
   components: { MenuItem, FoodList },
  
  methods: {
-   idkwtf(){
-     this.$refs.idk.getItemFood("ss");
-   }
+
  }
 
 
@@ -66,16 +91,20 @@ export default {
   flex-direction: row;
   height: 100%;
   margin: 0 55px 0 55px;
-  
 
 }
 
 .selected{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
   width: 70%;
   margin-right: 35px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
+
+
 
 .payment{
   margin-top: auto;
