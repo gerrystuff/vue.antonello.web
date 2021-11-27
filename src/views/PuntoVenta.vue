@@ -48,7 +48,7 @@
         </div>
 
         <div class="pay">
-          <button type="button" style="width:70%;" class="btn btn-primary"> Pagar </button>
+          <button type="button" style="width:70%;git s" class="btn btn-primary"> Pagar </button>
         </div>
       </div>
 
