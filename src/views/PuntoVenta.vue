@@ -44,11 +44,11 @@
 
       <div class="payment">
         <div class="total" style=" height:70%; ">
-          <p>$ 105.00</p>
+          <p>$ {{$store.state.importe}}</p>
         </div>
 
         <div class="pay">
-          <button type="button" style="width:70%;git s" class="btn btn-primary"> Pagar </button>
+          <button type="button" style="width:70%;git s" class="btn btn-success"> Pagar </button>
         </div>
       </div>
 
@@ -64,7 +64,15 @@ import FoodList from "@/components/FoodList.vue";
 export default {
   components: { MenuItem, FoodList },
 
-  methods: {},
+
+data(){
+  return {
+    importe: 0
+  } 
+},
+  methods: {
+    
+  },
 };
 </script>
 
